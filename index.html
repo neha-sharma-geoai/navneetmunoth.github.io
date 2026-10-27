@@ -7,13 +7,24 @@
       name="description"
       content="Dr. Navneet Munoth, Associate Professor of Architecture and Planning at MANIT Bhopal. Academic profile, research interests, selected publications, and contact details."
     >
-    <meta name="theme-color" content="#f6f5f0">
+    <meta name="theme-color" content="#fff8ea">
     <title>Dr. Navneet Munoth | Architecture &amp; Urban Planning</title>
     <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+    <script>
+      (function () {
+        try {
+          var saved = localStorage.getItem("theme");
+          var dark = saved ? saved === "dark" : window.matchMedia("(prefers-color-scheme: dark)").matches;
+          document.documentElement.setAttribute("data-theme", dark ? "dark" : "light");
+        } catch (e) {}
+      })();
+    </script>
     <link rel="stylesheet" href="assets/styles.css">
+    <script src="assets/site.js" defer></script>
   </head>
   <body>
     <a class="skip-link" href="#main">Skip to content</a>
+    <div class="scroll-progress" aria-hidden="true"></div>
 
     <header class="site-header">
       <div class="header-inner">
@@ -28,11 +39,22 @@
           <a href="#cv">Curriculum Vitae</a>
           <a href="#contact">Contact</a>
         </nav>
+        <button class="theme-toggle" type="button" aria-label="Switch colour theme" aria-pressed="false">
+          <svg class="icon-sun" viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><circle cx="12" cy="12" r="4.5" fill="currentColor"/><g stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 2v3M12 19v3M2 12h3M19 12h3M4.9 4.9l2.1 2.1M17 17l2.1 2.1M4.9 19.1L7 17M17 7l2.1-2.1"/></g></svg>
+          <svg class="icon-moon" viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path fill="currentColor" d="M20.5 14.5A8.5 8.5 0 0 1 9.5 3.5a8.5 8.5 0 1 0 11 11z"/></svg>
+        </button>
       </div>
     </header>
 
     <main id="main">
       <section class="hero section-wrap" id="home" aria-labelledby="hero-title">
+        <svg class="hero-graphic" viewBox="0 0 800 600" preserveAspectRatio="xMidYMid slice" aria-hidden="true" focusable="false">
+          <g class="contours" fill="none" stroke="currentColor" stroke-width="1.5">
+            <ellipse cx="620" cy="260" rx="60" ry="40"/><ellipse cx="620" cy="260" rx="110" ry="75"/>
+            <ellipse cx="620" cy="260" rx="165" ry="115"/><ellipse cx="620" cy="260" rx="225" ry="160"/>
+            <ellipse cx="620" cy="260" rx="290" ry="210"/><ellipse cx="620" cy="260" rx="360" ry="265"/>
+          </g>
+        </svg>
         <div class="hero-copy">
           <p class="eyebrow"><span class="eyebrow-line"></span> Academic profile</p>
           <h1 id="hero-title">Planning places.<br><span>Shaping better cities.</span></h1>
@@ -66,6 +88,20 @@
         </figure>
         <span class="hero-index" aria-hidden="true">01 / 05</span>
       </section>
+
+      <div class="skyline" aria-hidden="true">
+        <svg viewBox="0 0 1200 120" preserveAspectRatio="none" focusable="false">
+          <path class="sky-back" d="M0 120V70h40V50h30v20h30V30h35v40h25V55h40V20h28v35h30V65h45V40h32v30h30V25h40v45h35V60h30V35h38v35h40V55h30V15h34v40h28V65h40V45h35v25h30V30h40v40h36V58h30V38h30v32h40V50h30V22h32v28h28V66h36V48h30v22h40V40h34v30h30V60h38V36h30v34h40V120z"/>
+          <path class="sky-front" d="M0 120V95h60V80h40v15h50V70h30v25h60V85h45V60h35v35h50V90h40V75h40v20h55V65h30v30h50V88h40V72h38v23h50V82h42V58h30v37h52V90h40V78h36v17h50V68h34v27h60V85h40V74h34v21h50V92h40V80h44v15h60V70h30v25h50V120z"/>
+        </svg>
+      </div>
+
+      <div class="ticker" aria-hidden="true">
+        <div class="ticker-track">
+          <span>Urban Planning</span><span>Heritage Conservation</span><span>Remote Sensing &amp; GIS</span><span>Smart Cities</span><span>Sustainable Design</span><span>Urban Mobility</span><span>Vernacular Architecture</span><span>Green Cities</span>
+          <span>Urban Planning</span><span>Heritage Conservation</span><span>Remote Sensing &amp; GIS</span><span>Smart Cities</span><span>Sustainable Design</span><span>Urban Mobility</span><span>Vernacular Architecture</span><span>Green Cities</span>
+        </div>
+      </div>
 
       <section class="intro-band" aria-label="Academic background">
         <div class="section-wrap intro-grid">

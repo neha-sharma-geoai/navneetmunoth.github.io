@@ -26,3 +26,8 @@ In the repository settings, open **Pages**, select **Deploy from a branch**, and
 - The CV details are grouped in expandable sections on the page. Verify bibliographic and project details against source records when updating them.
 
 Profile details and selected coauthored publications were taken from the linked profile repository. Please verify and update publication metadata as new work is added.
+
+## Design features
+
+- Light and dark themes (toggle in the header; remembers choice, follows system preference by default).
+- Larger type scale, inline SVG graphics (contour lines, skyline), scrolling topic ticker, scroll progress bar and reveal animations (disabled for reduced-motion users).
