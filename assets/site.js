@@ -20,6 +20,22 @@
     });
   }
 
+  var filters = document.querySelectorAll(".project-filter button");
+  var cards = document.querySelectorAll(".project-card");
+  filters.forEach(function (btn) {
+    btn.addEventListener("click", function () {
+      var f = btn.getAttribute("data-filter");
+      filters.forEach(function (b) {
+        var on = b === btn;
+        b.classList.toggle("is-active", on);
+        b.setAttribute("aria-pressed", String(on));
+      });
+      cards.forEach(function (c) {
+        c.hidden = !(f === "all" || c.getAttribute("data-status") === f);
+      });
+    });
+  });
+
   var bar = document.querySelector(".scroll-progress");
   function onScroll() {
     var h = document.documentElement.scrollHeight - window.innerHeight;
@@ -29,7 +45,7 @@
   onScroll();
 
   var targets = document.querySelectorAll(
-    ".section-heading, .about-copy, .education-card, .recognition, .research-card, .publication, .cv-highlights > div, .cv-group, .contact-wrap > div"
+    ".section-heading, .about-copy, .education-card, .recognition, .research-card, .project-card, .publication, .cv-highlights > div, .cv-group, .contact-wrap > div"
   );
   var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
   if (reduce || !("IntersectionObserver" in window)) return;

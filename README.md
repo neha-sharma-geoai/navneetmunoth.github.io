@@ -22,12 +22,13 @@ In the repository settings, open **Pages**, select **Deploy from a branch**, and
 
 - Edit `index.html` to update profile text, research areas, publications, and links.
 - Edit `assets/styles.css` to adjust the visual design and responsive layouts.
-- Replace `assets/navneet-munoth.jpg` with an updated portrait, keeping the same filename or updating the image path in `index.html`.
+- Replace `assets/navneet-munoth-portrait.png` with an updated portrait, keeping the same filename or updating the image path in `index.html`.
+- `assets/Navneet-Munoth-CV.pdf` is the downloadable CV. It is a public-safe version (no date of birth, family or home contact details). Replace it when the CV changes.
 - The CV details are grouped in expandable sections on the page. Verify bibliographic and project details against source records when updating them.
 
 Profile details and selected coauthored publications were taken from the linked profile repository. Please verify and update publication metadata as new work is added.
 
 ## Design features
 
-- Light and dark themes (toggle in the header; remembers choice, follows system preference by default).
-- Larger type scale, inline SVG graphics (contour lines, skyline), scrolling topic ticker, scroll progress bar and reveal animations (disabled for reduced-motion users).
+- Elegant light and dark themes (toggle in the header; remembers the choice and follows the system setting by default).
+- Inline SVG architecture and planning graphics (site plan, building elevations), project filter, scroll progress bar and reveal animations (disabled for reduced-motion users).
